@@ -3,6 +3,7 @@ galaxy_info:
   description: NFS server/client
   company:  INDIGO-DataCloud
   license: Apache
+  role_name: nfs
   min_ansible_version: 1.8
   platforms:
   - name: EL
