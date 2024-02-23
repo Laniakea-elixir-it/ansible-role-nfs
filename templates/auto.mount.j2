@@ -1,5 +1,5 @@
 {{ ansible_managed | comment }}
 
-{% for inner in item.value.mounts %}
-{{ inner.mount }} -{{ inner.options | join(",") }} {{ inner.share }}
+{% for inner in nfs_client_imports %}
+{{ inner.local }} -{{ inner.options | join(",") }} {{ inner.server_host }}{{ inner.remote }}
 {% endfor %}

@@ -1,2 +1,7 @@
 - name: restart idmapd
   service: name=idmapd state=restarted
+
+- name: restart autofs
+  systemd:
+    name: autofs
+    state: restarted

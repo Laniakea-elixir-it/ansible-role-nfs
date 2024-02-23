@@ -12,18 +12,21 @@ nfs_client_imports:
   - local: "/home"
     remote: "/home"
     server_host: "{{hostvars['server']['ansible_default_ipv4']}}"
+    options:
+      - rw
+      - hard
+      - intr
+      - nosuid
+      - quota
 
 # Only enable NFSv4
 nfs_only_v4: false
 
-# Mount with fstab
-enable_fstab_mount: true
+# Mount mode: fstab or autofs
+mount_mode: fstab
 
-# Mount with autofs
-enable_autofs_mount: false
-
-autofs_map: 
-  galaxy:
-    path: /-
-    options:
-      - "nfsvers=3"
+autofs_maps: {} 
+  #  galaxy:
+  #    path: /-
+  #    options:
+  #      - "nfsvers=3"
