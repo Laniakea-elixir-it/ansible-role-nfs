@@ -15,3 +15,15 @@ nfs_client_imports:
 
 # Only enable NFSv4
 nfs_only_v4: false
+
+# Mount with fstab
+enable_fstab_mount: true
+
+# Mount with autofs
+enable_autofs_mount: false
+
+autofs_map: 
+  galaxy:
+    path: /-
+    options:
+      - "nfsvers=3"
