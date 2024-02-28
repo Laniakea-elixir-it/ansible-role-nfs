@@ -18,10 +18,9 @@ nfs_client_imports:
 nfs_only_v4: false
 
 # Mount mode: fstab or autofs
-mount_mode: fstab
+mount_mode: "fstab"
 
 autofs_maps: {} 
   #  galaxy:
   #    path: /-
-  #    options:
-  #      - "nfsvers=3"
+  #    options: "nfsvers=3"
