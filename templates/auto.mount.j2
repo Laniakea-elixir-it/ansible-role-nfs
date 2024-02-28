@@ -1,5 +1,5 @@
 {{ ansible_managed | comment }}
 
 {% for inner in nfs_client_imports %}
-{{ inner.local }} -{{ inner.options }} {{ inner.server_host }}{{ inner.remote }}
+{{ inner.local }} -{{ inner.options }} {{ inner.server_host }}:{{ inner.remote }}
 {% endfor %}
