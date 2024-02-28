@@ -6,7 +6,7 @@
 - name: Create auto.master and add map-files
   template:
     src: auto.master.j2
-    dest: "/etc/auto.master.d/{{ item.key }}.galaxy"
+    dest: "/etc/auto.master.d/{{ item.key }}.autofs"
   with_dict: "{{ autofs_maps }}"
   notify:
     - restart autofs
